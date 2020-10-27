@@ -1,0 +1,28 @@
+.logoAreaPerfil {
+    grid-area: logoAreaPerfil;
+    border-bottom: solid rgb(223, 222, 222) 1px;
+    background-color: rgb(255, 0, 43);
+    background-image:linear-gradient(-87deg, rgba(255,255,255,0.1) 0%,rgba(255,255,255,0.08) 30%,rgba(255,255,255,0.03) 40%,rgba(0,0,0,0) 51%,rgba(0,0,0,0.4) 100%);    align-items: left;
+    width: 100%;
+    height: 100%;
+}
+
+.logoAreaPerfil img {
+    margin-top: 0.4%;
+    width: 60px;
+}
+
+.alignmentBarPerfil{
+	float: right;
+	padding-top: 2%;
+}
+
+.wdtPerfil {
+    width: 100%;    
+}
+
+.profPicPerfil {
+	width: 50%;
+	height: 90%;
+	border-radius: 10%;
+}

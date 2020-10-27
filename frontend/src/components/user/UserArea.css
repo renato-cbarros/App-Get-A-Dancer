@@ -1,0 +1,114 @@
+/*.area {
+    padding-bottom: 0.5%;
+    padding-top: 0.5%;
+    width: 100%;
+    height: 85vh;
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+    background-color: wheat;
+    overflow: auto;
+}*/
+
+.area {
+    display: grid;
+    grid-template-columns: 35% 79%;
+    grid-template-rows:
+    7%
+    94%;
+    grid-template-areas:
+        "logoArea logoArea"
+        "chat match";
+    height: 100.1vh;
+    width: 106%;
+    margin-top: -2px;
+    margin-left: -8px;
+    margin-right: -1px;
+    background-color: violet;
+    overflow: hidden;
+}
+
+.chat {
+    grid-area: chat;
+    max-height: 100%;
+    max-width: 100%;
+    overflow:auto; 
+    background-color: rgb(255, 0, 43);
+}
+
+.match {
+    grid-area: match;
+    max-height: 100%;
+    max-width: 100%;
+    overflow:hidden; 
+    align-items: center;
+    background-color: rgb(240, 240, 240);
+}
+
+.logoArea {
+    grid-area: logoArea;
+    border-bottom: solid rgb(223, 222, 222) 1px;
+    background-color: rgb(255, 0, 43);
+    background-image:linear-gradient(-87deg, rgba(255,255,255,0.1) 0%,rgba(255,255,255,0.08) 30%,rgba(255,255,255,0.03) 40%,rgba(0,0,0,0) 51%,rgba(0,0,0,0.4) 100%);    align-items: left;
+    width: 100%;
+    height: 100%;
+}
+
+.logoArea img {
+    margin-top: 0.1%;
+    width: 63px;
+}
+
+@media(max-width: 768px) {
+    .area {
+        display: grid;
+        grid-template-columns: 30% 70%;
+        grid-template-rows:
+        9%
+        100%
+        100%;
+        grid-template-areas:
+            "logoArea logoArea"
+            "match match"
+            "chat chat";
+        background-color: violet;
+        height: 101vh;
+        width: 105%;
+        margin-top: 0px;
+        margin-bottom: -37px;
+        overflow: auto;
+    }
+
+    .logoArea img {
+        margin-top: 1.1%;
+        width: 63px;
+    }
+    
+
+}
+
+@media(max-width: 576px) {
+    .area {
+        display: grid;
+        grid-template-columns: 10% 90%;
+        grid-template-rows:
+        8%
+        100%
+        100%;
+        grid-template-areas:
+            "logoArea logoArea"
+            "match match"
+            "chat chat";
+        background-color: violet;
+        height: 151vh;
+        width: 107%;
+        margin-top: -45px;
+        overflow: auto;
+    }
+
+    .logoArea img {
+        margin-top: 2.5%;
+        width: 63px;
+    }
+    
+
+}

@@ -1,0 +1,24 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "jsonServer": "json-server --watch db.json --port 3333",
+    "server": "nodemon server.js",
+    "dev": "concurrently \"npm run server\" \"npm run jsonServer\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-fileupload": "^1.1.4",
+    "json-server": "^0.16.1"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "nodemon": "^1.19.0"
+  }
+}

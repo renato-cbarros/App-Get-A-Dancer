@@ -1,0 +1,166 @@
+{
+  "session": [
+    {
+      "id_user": 1,
+      "id": 1
+    }
+  ],
+  "user": [
+    {
+      "nome_user": "Teste Nome Um",
+      "data_nascimento": "2021-07-08",
+      "email": "example@example.com",
+      "telefone": "11955555551",
+      "genero": "M",
+      "cpf": "11111111111",
+      "senha": "123",
+      "id": 1
+    },
+    {
+      "nome_user": "Teste Nome Dois",
+      "data_nascimento": "2022-07-16",
+      "email": "botfourn123@gmail.com2",
+      "telefone": "11972465872",
+      "genero": "F",
+      "cpf": "48005692812",
+      "senha": "12",
+      "id": 2
+    },
+    {
+      "nome_user": "Teste Nome Tres",
+      "data_nascimento": "2020-07-03",
+      "email": "example3@example.com",
+      "telefone": "11972465873",
+      "genero": "M",
+      "cpf": "33333333333",
+      "senha": "333",
+      "id": 3
+    },
+    {
+      "nome_user": "Teste Nome Quatro",
+      "data_nascimento": "2020-07-04",
+      "email": "example4@example.com",
+      "telefone": "11972465874",
+      "genero": "M",
+      "cpf": "4444444444444",
+      "senha": "444",
+      "id": 4
+    },
+    {
+      "nome_user": "Teste Nome Quatro",
+      "data_nascimento": "2020-07-04",
+      "email": "example10@example.com",
+      "telefone": "11972465874",
+      "genero": "M",
+      "cpf": "44444444444",
+      "senha": "44",
+      "id": 5
+    }
+  ],
+  "perfil": [
+    {
+      "id": 1,
+      "id_user": 1,
+      "url_img_perfil": "imgPerfil1.png",
+      "nick": "Teste Nick Um",
+      "bio": "Bla bla bla 1",
+      "dancas_conhecidas": "Samba e Funk",
+      "dancas_desconhecidas": "Tango",
+      "distancia_matchs": "60",
+      "hora_match": "09:00"
+    },
+    {
+      "id": 2,
+      "id_user": 2,
+      "url_img_perfil": "imgPerfil2.png",
+      "nick": "Teste Dois teste",
+      "bio": "Bla bla bla 2 teste",
+      "dancas_conhecidas": "Tango teste",
+      "dancas_desconhecidas": "Samba teste",
+      "distancia_matchs": "45",
+      "hora_match": "11:20"
+    },
+    {
+      "id": 3,
+      "id_user": 3,
+      "url_img_perfil": "imgPerfil3.png",
+      "nick": "Teste Nick Tres",
+      "bio": "Bio 3",
+      "dancas_conhecidas": "Samba",
+      "dancas_desconhecidas": "Tango",
+      "distancia_matchs": "43",
+      "hora_match": ""
+    },
+    {
+      "id": 4,
+      "id_user": 4,
+      "url_img_perfil": "imgPerfil4.png",
+      "nick": "Teste Nick Quatro",
+      "bio": "Bio 4",
+      "dancas_conhecidas": "Tango",
+      "dancas_desconhecidas": "Samba",
+      "distancia_matchs": "44",
+      "hora_match": ""
+    },
+    {
+      "id_user": 5,
+      "url_img_perfil": "branca.png",
+      "nick": "",
+      "bio": "",
+      "dancas_conhecidas": "",
+      "dancas_desconhecidas": "",
+      "distancia_matchs": "",
+      "hora_match": "",
+      "id": 5
+    }
+  ],
+  "perfils_combinacoes": [],
+  "perfils_matchs": [
+    {
+      "id": 1,
+      "id_user": 1,
+      "url_img_perfil": "imgPerfil1.png",
+      "nick": "Teste Nick Um",
+      "bio": "Bla bla bla 1",
+      "dancas_conhecidas": "Samba e Funk",
+      "dancas_desconhecidas": "Tango",
+      "distancia_matchs": "60",
+      "hora_match": "09:00"
+    },
+    {
+      "id": 3,
+      "id_user": 3,
+      "url_img_perfil": "imgPerfil3.png",
+      "nick": "Teste Nick Tres",
+      "bio": "Bio 3",
+      "dancas_conhecidas": "Samba",
+      "dancas_desconhecidas": "Tango",
+      "distancia_matchs": "43",
+      "hora_match": ""
+    }
+  ],
+  "matchs": [
+    {
+      "id": 1,
+      "id_perfil_deu_match": 1,
+      "id_perfil_recebeu_match": 4
+    },
+    {
+      "id": 2,
+      "id_perfil_deu_match": 4,
+      "id_perfil_recebeu_match": 1
+    },
+    {
+      "id": 3,
+      "id_perfil_deu_match": 4,
+      "id_perfil_recebeu_match": 2
+    }
+  ],
+  "matchs_conf": [
+    {
+      "id": 1,
+      "id_perfil_deu_match": 1,
+      "id_perfil_recebeu_match": 4
+    }
+  ]
+}

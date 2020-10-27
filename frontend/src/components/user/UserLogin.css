@@ -1,0 +1,43 @@
+.form-log {
+    padding-bottom: 2%;
+    padding-top: 2%;
+    width: 100%;
+    padding-left: 30%;
+    padding-right: 30%;
+    background-image:url("../../assets/imgs/branca.png");
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+}
+
+@media(max-width: 820px) {
+    .form-log {
+        padding-bottom: 2%;
+        padding-top: 2%;
+        width: 100%;
+        padding-left: 15%;
+        padding-right: 15%;
+        background-image:url("../../assets/imgs/branca.png");
+        background-size: 77%;
+        background-repeat: no-repeat;
+        background-position-x: center;
+    }
+    
+}
+
+@media(max-width: 576px) {
+    .form-log {
+        padding-bottom: 2%;
+        padding-top: 2%;
+        width: 100%;
+        padding-left: 10%;
+        padding-right: 10%;
+        background-image:url("../../assets/imgs/branca.png");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position-x: center;
+    }
+}

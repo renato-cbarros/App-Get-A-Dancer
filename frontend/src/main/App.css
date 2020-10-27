@@ -1,0 +1,123 @@
+
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+/* Layout em Grid*/
+
+.app {
+    display: grid;
+    grid-template-columns: 5% 89% 5%;
+    grid-template-rows:
+    7%
+    85%
+    2%;
+    grid-template-areas:
+        "logo header menu"
+        "content content content"
+        "footer footer footer";
+    height: 100vh;
+    align-items: center;
+
+    background-image:url("../assets/imgs/fundo1.jpg");
+    background-size: 100%;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+    animation-name: fundoAnimado;
+    animation-duration: 30s;
+    animation-delay: 0s;
+    overflow:hidden; 
+
+}
+
+@keyframes fundoAnimado {
+    0%  {background-image: url("../assets/imgs/fundo1.jpg");}
+    25% {background-image: url("../assets/imgs/fundo2.jpg");}
+    50% {background-image: url("../assets/imgs/fundo3.jpg");}
+    75% {background-image: url("../assets/imgs/fundo4.jpg");}
+    100% {background-image: url("../assets/imgs/fundo5.jpg");}
+}
+
+
+aside.logo {
+    grid-area: logo;
+}
+
+header.header {
+    grid-area: header;
+}
+
+aside.menu-area {
+    grid-area: menu;
+}
+
+main.content {
+    grid-area: content;
+}
+
+footer.footer {
+    grid-area: footer;
+}
+
+@media(max-width: 768px) {
+    .app {
+        grid-template-columns: 9% 80% 9%;
+        grid-template-rows:
+            7%
+            79%
+            9%;
+        grid-template-areas:
+            "logo header menu"
+            "content content content"
+            "footer footer footer";
+
+            background-image: url("../assets/imgs/fundo1-728.jpg");
+            background-size: 100%;
+            animation-direction: alternate-reverse;
+            animation-iteration-count: infinite;
+            animation-name: fundoAnimadoDois;
+            animation-duration: 10s;
+            animation-delay: 0s;
+    }
+
+    @keyframes fundoAnimadoDois {
+        0%  {background-image: url("../assets/imgs/fundo1-728.jpg");}
+        25% {background-image: url("../assets/imgs/fundo2-728.jpg");}
+        50% {background-image: url("../assets/imgs/fundo3-728.jpg");}
+        75% {background-image: url("../assets/imgs/fundo4-728.jpg");}
+        100% {background-image: url("../assets/imgs/fundo5-728.jpg");}
+    }
+    
+}
+
+@media(max-width: 576px) {
+    .app {
+        grid-template-columns: 10% 77% 10%;
+        grid-template-rows:
+            10%
+            80%
+            4%;
+        grid-template-areas:
+            "logo header menu"
+            "content content content"
+            "footer footer footer";
+            height: 150vh;
+            
+            background-image: url("../assets/imgs/fundo1-576.jpg");
+            background-size: 100%;
+            animation-direction: alternate-reverse;
+            animation-iteration-count: infinite;
+            animation-name: fundoAnimadoTres;
+            animation-duration: 10s;
+            animation-delay: 0s;
+    }
+
+    @keyframes fundoAnimadoTres {
+        0%  {background-image: url("../assets/imgs/fundo1-576.jpg");}
+        25% {background-image: url("../assets/imgs/fundo2-576.jpg");}
+        50% {background-image: url("../assets/imgs/fundo3-576.jpg");}
+        75% {background-image: url("../assets/imgs/fundo4-576.jpg");}
+        100% {background-image: url("../assets/imgs/fundo5-576.jpg");}
+    }
+}

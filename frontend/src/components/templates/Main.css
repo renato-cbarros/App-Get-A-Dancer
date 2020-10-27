@@ -1,0 +1,23 @@
+/*
+h1{
+    padding-top: 1%;
+    text-align: center;
+
+}
+
+main.content {
+    background-color: violet;
+}
+*/
+
+.letter label {
+    color: black;
+}
+
+.letter h1{
+    color: black;
+}
+
+.letter option{
+    color: black;
+}
