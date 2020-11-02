@@ -1,4 +1,5 @@
-Execute os seguintes comandos na pasta do projeto:
+Com o node instalado,
+execute os seguintes comandos na pasta do projeto:
 
 cd backend
 /npm i
