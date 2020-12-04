@@ -83,6 +83,7 @@
     font-size: 32px;
     margin-top: 200px;
     margin-right: 500px;
+    margin-left: -23%;
     color: black;
 }
 
@@ -138,4 +139,93 @@
     cursor: pointer;
 }
 
+
+
+.divAgendar {
+	margin-top: 2%;
+	margin-right: 50%;
+}
+
+.btnAgendamentos button{
+	border: none;
+	background-color: transparent;
+	border-style: none;
+	cursor: none;
+	transform: none;
+	transition: none;
+	border-color: transparent;
+	box-shadow: none;
+}
+
+.btnAgendamentos b{
+	color: white;
+	width: 5px;
+}
+
+
+.listaAgendamentos{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows:
+    100%;
+    grid-template-areas:
+        "enviarArea receberArea";
+    margin-left: -23%;
+	margin-top: 1%;
+	width: 85%;
+    height: 5700%;
+	overflow:auto; 
+}
+
+@media(max-width: 576px) {
+    .listaAgendamentos{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows:
+        100%;
+        grid-template-areas:
+            "enviarArea receberArea";
+        margin-left: -9%;
+        margin-top: 1%;
+        width: 46%;
+        height: 5700%;
+        overflow:auto; 
+    }
+
+    .divAgendar{
+        margin-top: 1%;
+        width: 30%;
+        height: 5700%;
+
+    }
+
+}
+
+.enviarArea{
+    width: 195%;
+    margin-right: 0;
+}
+.receberArea{
+    width: 195%;
+    margin-right: 0;
+
+}
+h3 {
+    background-color: rgb(255, 0, 43);
+}
+
+.ChatBarAgendamento{
+	width: 50%;
+	height: 26%;
+	border-bottom: solid #DCDCDC 1px;
+	background-color: white;
+	background-size: 100%;
+	font-size: 80%;
+}
+
+.alignmentBarAgendamento{
+	float: left;
+	padding-top: 1.5%;
+	margin-left: 0.1%;
+}
 

@@ -17,8 +17,8 @@ import chat from '../../assets/imgs/fundo1-576.jpg'
 import match from '../../assets/imgs/fundo3.jpg'
 
 /*urls do server json */
-const baseUrlSession = 'http://localhost:3333/session'
-const baseUrlPerfil = 'http://localhost:3333/perfil'
+const baseUrlSession = 'http://localhost:8000/session'
+const baseUrlPerfil = 'http://localhost:8000/perfil'
 /*objs e listas */
 const initialState = {
     perfil: {
@@ -29,7 +29,8 @@ const initialState = {
     session: {
         id_user: ''
     },
-    listSession: []
+    listSession: [],
+    validaSession: false
 }
 let file = ''
 let fileName = ''
@@ -42,6 +43,7 @@ export default class UserPerfil extends Component {
         alert("INFORMAÇÕES DO PERFIL")
         this.getSession()
     }
+   
     /*Recarrega o obj perfil*/
     load(perfil) {
         this.setState({ perfil })
@@ -134,7 +136,6 @@ export default class UserPerfil extends Component {
         file = (e.target.files[0]); {/* o type file da 1 array como padrao, mas para pegar so o primeiro setamos como [0] */ }
         fileName = (e.target.files[0].name); {/* aí ta pegando o nome do target.files na posição 0(que seria a primeira posiçao) */ }
         this.setState({ fileN: fileName })
-        this.updateField(e)
 
     }
     /*Salva a img no diretorio */
@@ -142,6 +143,7 @@ export default class UserPerfil extends Component {
         {/* define uma função assícrona, que retornará uma Promise(valor que pode estar disponível agora, no futuro
         ou nunca..) */}
         /*Salva o caminho da img de perfil */
+        alert(this.state.perfil.id_user)
         this.state.perfil.url_img_perfil = 'imgPerfil' + this.state.perfil.id_user + '.png'
         e.preventDefault();
         const formData = new FormData(); {/* da a opção de compilar um valor de chaves para enviar usando o XMLHttpRequest. É usado geralmente para
@@ -155,7 +157,6 @@ export default class UserPerfil extends Component {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 },
-                proxy: "http://localhost:5000",
 
             }); {/* como ja configuramos o proxy, nao precisamos especificar o domínio(localhost/3000) no axios.post */ }
             alert('File uploaded');
@@ -184,16 +185,16 @@ export default class UserPerfil extends Component {
                                 <h1>INFORMAÇÕES DE PERFIL</h1>
                                 <hr />
                                 {
-                                this.state.perfil.url_img_perfil == ('imgPerfil' + this.state.perfil.id_user + '.png') ? (
-                                    <div class="alignmentBarPerfil wdtPerfil">
-                                        <img src={require('../../assets/imgsPerfil/' + this.state.perfil.url_img_perfil)}
-                                            alt={this.state.perfil.nick} class="profPicPerfil" />
-                                    </div>
-                                ) : (
-                                    <div className="col-12 d-flex justify-content-center mt-2 mb-4">
-                                        <label>ATUALIZE SUA FOTO DE PERFIL!</label>
-                                    </div>
-                                )
+                                    this.state.perfil.url_img_perfil == ('imgPerfil' + this.state.perfil.id_user + '.png') ? (
+                                        <div class="alignmentBarPerfil wdtPerfil">
+                                            <img src={require('../../assets/imgsPerfil/' + this.state.perfil.url_img_perfil)}
+                                                alt={this.state.perfil.nick} class="profPicPerfil" />
+                                        </div>
+                                    ) : (
+                                            <div className="col-12 d-flex justify-content-center mt-2 mb-4">
+                                                <label>ATUALIZE SUA FOTO DE PERFIL!</label>
+                                            </div>
+                                        )
                                 }
 
                                 <label for="exampleFormControlFile1">CARREGAR FOTO DE PERFIL</label>

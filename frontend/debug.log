@@ -1,0 +1,8 @@
+[1201/234453.937:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
+[1201/234453.982:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\renat\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\24a08b7d-abdc-4dbc-950f-3c8be3f4367e: O sistema não pode encontrar o caminho especificado. (0x3)
+[1201/234453.994:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\renat\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\6d5617c3-80bf-492b-ac79-2c3e18a2e1ca: O sistema não pode encontrar o caminho especificado. (0x3)
+[1201/234454.007:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\renat\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\2af8109a-7769-45f1-b589-ad111c058d7c: O sistema não pode encontrar o caminho especificado. (0x3)
+[1201/234454.029:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\renat\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\50f532fb-e52a-4502-abd4-0d2f223564e8: O sistema não pode encontrar o caminho especificado. (0x3)
+[1201/234454.047:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\renat\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\b92d6da3-6749-4754-8431-5f1a8237098a: O sistema não pode encontrar o caminho especificado. (0x3)
+[1203/020317.261:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
+[1203/214010.460:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)

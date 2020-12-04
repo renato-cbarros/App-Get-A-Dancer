@@ -7,8 +7,8 @@ import './UserAccount.css'
 import logo from '../../assets/imgs/logo.png'
 
 /*urls do server json */
-const baseUrl = 'http://localhost:3333/user'
-const baseUrlSession = 'http://localhost:3333/session'
+const baseUrl = 'http://localhost:8000/user'
+const baseUrlSession = 'http://localhost:8000/session'
 /*objs e listas */
 const initialState = {
     user: {

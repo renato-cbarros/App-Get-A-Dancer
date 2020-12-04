@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "jsonServer": "json-server --watch db.json --port 3333",
+    "jsonServer": "json-server --watch db.json --port 8000 --host 127.0.0.1",
     "server": "nodemon server.js",
     "dev": "concurrently \"npm run server\" \"npm run jsonServer\""
   },

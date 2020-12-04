@@ -7,9 +7,9 @@ import Alert from 'react-bootstrap/Alert'
 import { Redirect } from 'react-router'
 
 /*urls do server json */
-const baseUrl = 'http://localhost:3333/user'
-const baseUrlSession = 'http://localhost:3333/session'
-const baseUrlPerfil = 'http://localhost:3333/perfil'
+const baseUrl = 'http://localhost:8000/user'
+const baseUrlSession = 'http://localhost:8000/session'
+const baseUrlPerfil = 'http://localhost:8000/perfil'
 /*objs e listas */
 const initialState = {
     user: {
@@ -34,10 +34,6 @@ export default class UserRegistration extends Component {
 
     state = { ...initialState }
 
-    componentWillMount() {
-        alert("CADASTRO")
-    }
-
     next = () => {
         window.location.href = "http://localhost:3000/userPerfil"
     }
@@ -50,19 +46,21 @@ export default class UserRegistration extends Component {
         const user = this.state.user
         const method = 'post'
         const url = baseUrl
+        const methodP = 'post'
+        const urlP = baseUrlPerfil
+
+        const perfil = this.state.perfil
+        perfil.url_img_perfil = "branca.png"
+
         var senhaConf = document.getElementById('senhaCon').value
         user.senha == senhaConf && user.nome_user != '' && user.data_nascimento != ''
             && user.email != '' && user.telefone != '' && user.genero != '' && user.cpf != ''
             && user.senha != '' ? (
                 axios[method](url, user)
                     .then(resp => {
-                        const list = this.getUpdatedList(resp.data)
-                        let idUser = resp.data.id
-                        this.setState({ user: initialState.user, list })
-                        alert("CADASTRO REALIZADO COM SUCESSO!" + idUser)
-                        this.startSession(idUser)
-                        this.createPerfil(idUser)
-                        this.next();
+                        perfil.id_user = resp.data.id
+                        axios[methodP](urlP, perfil)
+                        alert("CADASTRO REALIZADO COM SUCESSO!")
                     })
             ) : (
                 alert("FALHA AO CADASTRAR!")

@@ -6,9 +6,9 @@ import { Redirect } from 'react-router'
 /*import 'bootstrap/dist/css/bootstrap.min.css'*/
 import './UserLogin.css'
 
-const baseUrl = 'http://localhost:3333/user'
+const baseUrl = 'http://localhost:8000/user'
 
-const baseUrlSession = 'http://localhost:3333/session'
+const baseUrlSession = 'http://localhost:8000/session'
 
 const initialState = {
     user: {
@@ -28,26 +28,28 @@ export default class UserLogin extends Component {
 
     startSession() {
         const session = this.state.session
-        alert(session.id_user)
         const method = 'put'
         const url = `${baseUrlSession}/${1}`
         session.id_user > 0 ? (
-        axios[method](url, session)
-            .then(resp => {
-                const list = this.getUpdatedList(resp.data)
-                this.setState({ session: initialState.session, list })
-                alert("SESSÃO INICIADA!")
-            })
+            axios[method](url, session)
+                .then(resp => {
+                    const list = this.getUpdatedList(resp.data)
+
+                    this.setState({ session: initialState.session, list })
+                })
         ) : (
-            alert("FALHA AO INICIAR SESSÃO!")
-        )
+                alert("FALHA AO INICIAR SESSÃO!")
+            )
+        alert("SESSÃO INICIADA!")
+        this.chamaLogin()
+
     }
 
     alertSucess() {
         /* window.location.href = "http://localhost:3000/userReg"*/
-        alert("LOGIN REALIZADO COM SUCESSO!")
         this.startSession()
-        this.chamaLogin()
+        alert("LOGIN REALIZADO COM SUCESSO!")
+
     }
 
     alertFail() {
@@ -93,16 +95,14 @@ export default class UserLogin extends Component {
     validPass() {
         let val = false
         const userCon = this.state.user
-        this.state.list.length > 0 && ( 
-        this.state.list.map(user => {
-            if (userCon.senha == user.senha) (
-                this.state.session.id_user = user.id
-            )
-        })
+        this.componentWillMount()
+        this.state.list.length > 0 && (
+            this.state.list.map(user => {
+                if (userCon.senha == user.senha) {
+                    val = true
+                }
+            })
         )
-        if (this.state.session.id_user > 0) {
-            val = true
-        }
         return val
     }
     /*Valida o login */
@@ -112,9 +112,12 @@ export default class UserLogin extends Component {
         this.componentWillMount()
         this.state.list.map(user => {
             if (userCon.email == user.email) (
-                val = true
+                this.state.session.id_user = user.id
             )
         })
+        if (this.state.session.id_user > 0) {
+            val = true
+        }
         return val
     }
 
@@ -162,17 +165,17 @@ export default class UserLogin extends Component {
     }
 
     render() {
-        if(this.state.redirect) {
-             return <Redirect to="/userArea" />
-           } else {
-        return (
-            <Main title="Enconter sxx parceirx de dança agora!" navItemFirst="Login" navItemFirstLink="/userLog"
-                navItemSecond="Esqueceu sua senha?" navItemSecondLink="/userReco" navItemThird="Cadastrar"
-                navItemThirdLink="/userReg" linkLogo="/">
-                {this.renderForm()}
-            </Main>
-        )
-       }
-}
+        if (this.state.redirect) {
+            return <Redirect to="/userArea" />
+        } else {
+            return (
+                <Main title="Enconter sxx parceirx de dança agora!" navItemFirst="Login" navItemFirstLink="/userLog"
+                    navItemSecond="Esqueceu sua senha?" navItemSecondLink="/userReco" navItemThird="Cadastrar"
+                    navItemThirdLink="/userReg" linkLogo="/">
+                    {this.renderForm()}
+                </Main>
+            )
+        }
+    }
 
 }
